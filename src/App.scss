@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  max-width: 790px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.list__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 375px;
+
+  @media (max-width: 570px) {
+    margin-bottom: 118px;
+  }
+}
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

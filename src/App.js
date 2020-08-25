@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import './App.scss'
+import List from './components/list/List'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import ModalContainer from './containers/ModalContainer'
+import { getPhotos, openModal } from './redux/actions/actions'
 
-function App() {
+const App = () => {
+
+  const { isFetching, error } = useSelector(({ photos }) => photos)
+  const photos = useSelector(({ photos }) => photos.photos)
+  const { isOpen } = useSelector(({ modal }) => modal)
+  const dispatch = useDispatch()
+  
+  useEffect(() => {
+    dispatch(getPhotos())
+  }, [])
+
+  const getBigPhoto = (id) => {
+    dispatch(openModal(id))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header>Test App</Header>
+      <div className="list__content">
+        {isFetching 
+          ? <p>Loading...</p>
+          : error 
+          ? <p>{error}</p>
+          : photos.map(({ id, url }) => (
+              <List
+                key={id}
+                src={url}
+                onClick={() => getBigPhoto(id)}
+              />
+            ))
+        }
+      </div>
+      <Footer>&copy; 2019-2020</Footer>
+      {isOpen && <ModalContainer />}
     </div>
-  );
-}
+  )
+} 
 
-export default App;
+export default App

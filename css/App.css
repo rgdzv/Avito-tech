@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  max-width: 790px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.list__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 375px;
+}
+
+@media (max-width: 570px) {
+  .list__content {
+    margin-bottom: 118px;
+  }
+}
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,44 @@
+.list__item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+
+  img {
+    width: 230px;
+    height: 145px;
+
+    @media (max-width: 570px) {
+      width: 280px;
+      height: 170px;
+    }
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 770px) {
+    &:nth-child(3n) {
+      margin-right: 20px;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 570px) {
+    &:nth-child(n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+}

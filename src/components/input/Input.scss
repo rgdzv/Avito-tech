@@ -1,0 +1,24 @@
+input {
+  width: 330px;
+  height: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 13px;
+  color: #000;
+  outline: none;
+
+  &::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 13px;
+    color: #cccccc;
+  }
+
+  @media (max-width: 570px) {
+    width: 275px;
+  }
+}
