@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Avito-tech/static/css/main.1d8ed53c.chunk.css",
+    "main.js": "/Avito-tech/static/js/main.f52c6f60.chunk.js",
+    "main.js.map": "/Avito-tech/static/js/main.f52c6f60.chunk.js.map",
+    "runtime-main.js": "/Avito-tech/static/js/runtime-main.89f0821e.js",
+    "runtime-main.js.map": "/Avito-tech/static/js/runtime-main.89f0821e.js.map",
+    "static/js/2.ef06bda5.chunk.js": "/Avito-tech/static/js/2.ef06bda5.chunk.js",
+    "static/js/2.ef06bda5.chunk.js.map": "/Avito-tech/static/js/2.ef06bda5.chunk.js.map",
+    "index.html": "/Avito-tech/index.html",
+    "precache-manifest.8b7f9a426538f93083363b68721fbd17.js": "/Avito-tech/precache-manifest.8b7f9a426538f93083363b68721fbd17.js",
+    "service-worker.js": "/Avito-tech/service-worker.js",
+    "static/css/main.1d8ed53c.chunk.css.map": "/Avito-tech/static/css/main.1d8ed53c.chunk.css.map",
+    "static/js/2.ef06bda5.chunk.js.LICENSE.txt": "/Avito-tech/static/js/2.ef06bda5.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/Avito-tech/static/media/background.231985e9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.89f0821e.js",
+    "static/js/2.ef06bda5.chunk.js",
+    "static/css/main.1d8ed53c.chunk.css",
+    "static/js/main.f52c6f60.chunk.js"
+  ]
+}
