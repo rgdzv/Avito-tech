@@ -16,9 +16,10 @@ const Modal = ({
   comment,
   onModalClick,
   onLayoutClick,
+  isOpen
 }) => {
   return (
-    <Portal>
+    <Portal isOpen={isOpen}>
       <div className="modal__layout" onClick={onLayoutClick}>
         <div className="modal__window" onClick={onModalClick}>
           <div className="modal__content">
@@ -72,6 +73,7 @@ Modal.propTypes = {
   comment: PropTypes.string,
   onSubmit: PropTypes.func,
   onLayoutClick: PropTypes.func,
+  isOpen: PropTypes.bool,
 }
 
 Modal.defaultProps = {
@@ -84,6 +86,7 @@ Modal.defaultProps = {
   comment: '',
   onSubmit: () => {},
   onLayoutClick: () => {},
+  isOpen: false,
 }
 
 export default Modal

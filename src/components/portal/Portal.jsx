@@ -1,18 +1,22 @@
 import ReactDOM from 'react-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-const Portal = ({ children }) => {
+const Portal = ({ children, isOpen }) => {
   
-  const el = document.createElement('div');
+  const [elem, setElem] = useState(null)
 
   useEffect(() => {
+    const el = document.createElement('div');
     document.body.appendChild(el);
+    setElem(el)
     return () => {
       document.body.removeChild(el);
     } 
   }, [])
 
-  return ReactDOM.createPortal(children, el);
+  if(!elem || !isOpen) return null
+  if(elem && isOpen) return  ReactDOM.createPortal(children, elem);
+
 }
 
 export default Portal

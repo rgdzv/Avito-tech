@@ -24,10 +24,12 @@ const ModalContainer = () => {
     }
   }, []);
 
-  const handleChange = ({ target: { value, name } }) => setUser({
-    ...user,
-    [name]: value
-  });
+  const handleChange = ({ target: { value, name } }) => {
+    setUser({
+      ...user,
+      [name]: value
+    })
+  }
 
   const modalClose = () => {
     dispatch(closeModal())
@@ -49,6 +51,9 @@ const ModalContainer = () => {
         `https://boiling-refuge-66454.herokuapp.com/images/${photo.id}/comments`,
         { name: user.name, comment: user.comment, date: Date.parse(String(new Date())) }
       )
+      .then((res) => {
+        console.log(res)
+      })
       setUser({
         name: '',
         comment: '',
@@ -66,6 +71,7 @@ const ModalContainer = () => {
       comment={user.comment}
       onChange={handleChange}
       onSubmit={pushComment}
+      isOpen={isOpen}
     />
   )
 }
